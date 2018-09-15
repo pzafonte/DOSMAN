@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>DOSMAN.EXE (A DOS-themed Hangman Clone)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <style>
+    body {
+      padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+    }
+  </style>
+  <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="brand" href="index.html">DOSMAN.EXE</a>
+        <div class="nav-collapse collapse">
+          <ul class="nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Credits<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="nav-header">Attribution</li>
+                <li><a href="https://github.com/kristopolous/BOOTSTRA.386">BOOTSTRA.386</a></li>
+                <li><a href="http://www.vgmpf.com/">Audio Files</a></li>
+                <li class="divider"></li>
+                <li class="nav-header">Peter Zafonte</li>
+                <li><a href="https://pzafonte.github.io/">Portfolio</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!--/.nav-collapse -->
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <!-- Main hero unit for a primary marketing message or call to action -->
+    <div class="hero-unit">
+      <h1>DOSMAN WORD GUESS GAME</h1>
+      <h2>A DOS-themed Hangman Clone</h2>
+      <h3>Press any key to get started!</h3>
+      <p>
+        <div id="word-text"></div>
+      </p>
+      <p><a onclick="hardReset()" class="btn btn-primary btn-large">Reset Game</a></p>
+    </div>
+
+    <div class="row">
+      <div class="span4">
+        <h4>Wrong Guesses:</h4>
+        <p>
+          <div id="wrongguess-text"></div>
+        </p>
+      </div>
+      <div class="span4">
+        <h4>Remaining Guess Count:</h4>
+        <p><div id="remainingguess-text"></div></p>
+        <h4>Message:</h4>
+        <p>
+          <div id="message-text"></div>
+        </p>
+      </div>
+      <div class="span4">
+        <h4>Score</h4>
+        <p>
+          <div>Wins: </div>
+          <div id="wins-text"></div>
+          <div>Losses: </div>
+          <div id="losses-text"></div>
+        </p>
+
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <div class="span12">
+          <h3 style="text-align: center">Now Playing...</h3>
+          <img style="    display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 50%; padding: 20px" id="game-image" />
+          <!-- <p>
+          </p>
+        </div>
+        <div class="span6"> -->
+          
+        </div>
+      </div>
+
+    <hr>
+
+    <footer>
+      <p>&copy; Peter Zafonte 2018</p>
+    </footer>
+
+  </div> 
+
+  <audio id="doom-audio">
+    <source src="assets/audio/doom.ogg" type="audio/ogg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="dukenukem-audio">
+    <source src="assets/audio/dukenukem.ogg" type="audio/ogg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="dynablaster-audio">
+    <source src="assets/audio/dynablaster.ogg" type="audio/ogg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="lemmings-audio">
+    <source src="assets/audio/lemmings.ogg" type="audio/ogg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="simcity-audio">
+    <source src="assets/audio/simcity.ogg" type="audio/ogg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="ultimaunderworld-audio">
+    <source src="assets/audio/ultimaunderworld.ogg" type="audio/ogg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="wolfenstein-audio">
+    <source src="assets/audio/wolfenstein.ogg" type="audio/ogg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script src="assets/javascript/game.js"></script>
+  <script src="http://code.jquery.com/jquery.js"></script>
+  <script src="assets/javascript/bootstrap.min.js"></script>
+</body>
+
+</html>
